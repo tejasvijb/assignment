@@ -1,38 +1,112 @@
+
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  width : 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  /* background-color: bisque; */
+}
+
+.main {
+  display: flex;
+  height: 100%;
+}
+
+.sidebar {
+  height: 100%;
+  width: 15.565rem;
+  background-color: #2F4050;
+  color: rgb(167, 178, 195)
+
+}
+
+.sidebarList {
+  height: auto;
+  width: 100%;
+  /* background-color: azure; */
+}
+
+.sidebarList .sidebarItem {
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  list-style-type: none;
+  width: 100%;
+  height: 3.75rem;
 }
 
-.App-link {
-  color: #61dafb;
+.sidebarList .sidebarItem:hover {
+  cursor: pointer;
+  background-color: #293846;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.sidebarItem .sidebarIcon {
+  flex: 30%;
+  display: grid;
+  place-items: center;
 }
+
+.sidebar .sidebarTitle {
+  flex: 70%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #2F4050;
+  color: rgb(167, 178, 195)
+  
+}
+
+.userIcon {
+  display: flex;
+  align-items: center;
+}
+
+
+
+.ant-card-body {
+  height: 80%;
+}
+
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.wrapper .first {
+  font-weight: bold;
+}
+
+.addProduct {
+  position: absolute;
+  right: 1rem;
+  bottom: 8rem;
+}
+
+.ant-modal {
+  width: fit-content !important;
+}
+
+.products {
+  margin : auto;
+}
+
+.cardContent {
+  height: 25px;
+  overflow: hidden;
+}
+
+.removeProduct {
+  position: absolute;
+  bottom: 15px;
+  right: 10px;
+  overflow: visible;
+}
+
+
