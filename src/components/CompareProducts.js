@@ -1,5 +1,4 @@
 import CompareCard from "./CompareCard";
-import { Button } from "antd";
 import Mymodal from "./Mymodal"
 
 export const getSelectedData = (data,selected) => {

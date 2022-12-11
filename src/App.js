@@ -5,8 +5,8 @@ import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
 import Products from "./components/Products";
 import CompareProducts from "./components/CompareProducts";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Button,Modal, Table } from "antd";
+import {  Route, Routes,useNavigate  } from "react-router-dom";
+import { Button,Modal} from "antd";
 
 
 export const error = () => {
@@ -18,7 +18,7 @@ export const error = () => {
 function App() {
   const [data, setData] = useState([]);
   const [selected, setSelected] = useState({});
-  const [isError, setIserror] = useState(false)
+  const navigate = useNavigate()
 
   useEffect(() => {
     getData();
@@ -42,6 +42,7 @@ function App() {
         [selectedId]: true,
       };
     });
+    navigate("compareproducts")
   };
 
   const getData = async () => {
@@ -66,7 +67,6 @@ function App() {
 
   return (
     <div className="App">
-      <Router>
         <Navbar />
         <div className="main">
           <Sidebar />
@@ -98,7 +98,6 @@ function App() {
             ></Route>
           </Routes>
         </div>
-      </Router>
     </div>
   );
 }
