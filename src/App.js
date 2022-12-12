@@ -78,7 +78,6 @@ function App() {
                   selected={selected}
                   data={data.map((ele) => ({
                     ...ele,
-                    key: ele.id,
                     compare: (
                       <Button
                         type="primary"
