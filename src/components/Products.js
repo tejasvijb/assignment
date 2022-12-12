@@ -1,6 +1,6 @@
 
 import { render } from "@testing-library/react";
-import { Table } from "antd";
+import { Table,Tag } from "antd";
 
 export default function Products({ data,selected }) {
     
@@ -20,21 +20,37 @@ export default function Products({ data,selected }) {
         {
           title: "Price",
           dataIndex: "price",
+          render: (text,record) =>{
+            return selected[record.key] ? <Tag color="geekblue">{text}</Tag> : <p>{text}</p>
+
+          },
           sorter: (a, b) => a.price - b.price,
         },
         {
           title: "Discount",
           dataIndex: "discountPercentage",
+          render: (text,record) =>{
+            return selected[record.key] ? <Tag color="geekblue">{text}</Tag> : <p>{text}</p>
+
+          },
           sorter: (a, b) => a.discountPercentage - b.discountPercentage,
         },
         {
           title: "Rating",
           dataIndex: "rating",
+          render: (text,record) =>{
+            return selected[record.key] ? <Tag color="geekblue">{text}</Tag> : <p>{text}</p>
+
+          },
           sorter: (a, b) => a.rating - b.rating,
         },
         {
           title: "Stock",
           dataIndex: "stock",
+          render: (text,record) =>{
+            return selected[record.key] ? <Tag color="geekblue">{text}</Tag> : <p>{text}</p>
+
+          },
           sorter: (a, b) => a.stock - b.stock,
         },
         {
